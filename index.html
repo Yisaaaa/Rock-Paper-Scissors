@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lacquer&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -15,9 +15,51 @@
 
   <body>
     <div class="wrapper">
-      <section class="start-page">
+      <div class="start-page">
         <button class="btn btn--start">Start the game</button>
-      </section>
+      </div>
+
+      <main class="main">
+        <div class="img-container">
+          <div class="box">
+            <img class="img" src="img/human.png" alt="photo of a human" />
+            <p class="player">You</p>
+          </div>
+          <div class="box">
+            <img class="img" src="img/computer.webp" alt="photo of a robot" />
+            <p class="player">Computer</p>
+          </div>
+        </div>
+
+        <div class="score-container">
+          <p class="you-score">0</p>
+          <p class="computer-score">0</p>
+        </div>
+
+        <p class="result">...</p>
+
+        <div class="weapons">
+          <button class="weapon">
+            <img class="weapon-img" src="img/rock.png" alt="image of a rock" />
+          </button>
+          <button class="weapon">
+            <img
+              class="weapon-img"
+              src="img/paper.png"
+              alt="image of a paper"
+            />
+          </button>
+          <button class="weapon">
+            <img
+              class="weapon-img"
+              src="img/scissors.png"
+              alt="image of a scissors"
+            />
+          </button>
+        </div>
+
+        <p class="choose">Choose your weapon human.</p>
+      </main>
 
       <script src="script.js"></script>
     </div>
