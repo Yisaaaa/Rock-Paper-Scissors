@@ -25,11 +25,17 @@ body {
   cursor: pointer;
 }
 
-.start-page {
+.container {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.start-page {
+  display: absolute;
+  height: 100%;
+  transition: opacity 1s;
 }
 
 .btn--start {
@@ -48,4 +54,9 @@ body {
 .btn--start:hover {
   box-shadow: 0.4rem 0.5rem 0 #16082b;
   transform: translate(0.1rem, 0.2rem);
+}
+
+.btn--start:active {
+  box-shadow: 0.1rem 0.2rem 0 #16082b;
+  transform: translate(0.4rem, 0.5rem);
 }
