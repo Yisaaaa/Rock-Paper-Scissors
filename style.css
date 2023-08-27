@@ -17,6 +17,15 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  color: white;
+}
+
+/********************/
+/* GENERAL CSS      */
+/********************/
+.wrapper {
+  position: relative;
+  height: 100%;
 }
 
 .btn {
@@ -25,17 +34,25 @@ body {
   cursor: pointer;
 }
 
-.container {
+/********************/
+/* START PAGE       */
+/********************/
+.start-page {
   display: flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.start-page {
-  display: absolute;
   height: 100%;
   transition: opacity 1s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* TEMPORARY */
+  /* opacity: 0;
+  pointer-events: none;
+  visibility: hidden; */
 }
 
 .btn--start {
