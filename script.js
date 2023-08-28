@@ -106,6 +106,21 @@ class Game {
     }
   }
 
+  declareWinner() {
+    const weaponsEL = document.querySelector(".weapons");
+    const winnerStatement = document.querySelector(".choose");
+
+    hide(weaponsEL);
+
+    winnerStatement.style.transform = "translateY(-22rem)";
+    winnerStatement.style.fontSize = "4.8rem";
+    if (this.whoWon() === "human") {
+      winnerStatement.textContent = "Congratulations, human.";
+    } else {
+      winnerStatement.textContent = "You failed humanity.";
+    }
+  }
+
   start() {
     let result;
     const weapons = document.querySelectorAll(".weapon");
@@ -124,7 +139,7 @@ class Game {
         this.updateScore(result);
 
         if (this.isThereAWinner()) {
-          console.log(this.whoWon());
+          this.declareWinner();
         }
       });
     });
