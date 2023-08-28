@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lacquer&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Rock Paper Scissors</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lacquer&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+        <title>Rock Paper Scissors</title>
+    </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="start-page">
-        <button class="btn btn--start">Start the game</button>
-      </div>
+    <body>
+        <div class="wrapper">
+            <div class="start-page">
+                <button class="btn btn--start">Start the game</button>
+            </div>
 
-      <main class="main">
-        <div class="img-container">
-          <div class="box">
-            <img class="img" src="img/human.png" alt="photo of a human" />
-            <p class="player">You</p>
-          </div>
-          <div class="box">
-            <img class="img" src="img/computer.webp" alt="photo of a robot" />
-            <p class="player">Computer</p>
-          </div>
+            <main class="main">
+                <div class="img-container">
+                    <div class="box">
+                        <img
+                            class="img"
+                            src="img/human.png"
+                            alt="photo of a human"
+                        />
+                        <p class="player">You</p>
+                    </div>
+                    <div class="box">
+                        <img
+                            class="img"
+                            src="img/computer.webp"
+                            alt="photo of a robot"
+                        />
+                        <p class="player">Computer</p>
+                    </div>
+                </div>
+
+                <div class="score-container">
+                    <p class="you-score">0</p>
+                    <p class="computer-score">0</p>
+                </div>
+
+                <p class="result">...</p>
+
+                <div class="weapons">
+                    <button value="rock" class="weapon">
+                        <img
+                            class="weapon-img"
+                            src="img/rock.png"
+                            alt="image of a rock"
+                        />
+                    </button>
+                    <button value="paper" class="weapon">
+                        <img
+                            class="weapon-img"
+                            src="img/paper.png"
+                            alt="image of a paper"
+                        />
+                    </button>
+                    <button value="scissors" class="weapon">
+                        <img
+                            class="weapon-img"
+                            src="img/scissors.png"
+                            alt="image of a scissors"
+                        />
+                    </button>
+                </div>
+
+                <p class="choose">Choose your weapon human.</p>
+            </main>
         </div>
-
-        <div class="score-container">
-          <p class="you-score">0</p>
-          <p class="computer-score">0</p>
-        </div>
-
-        <p class="result">...</p>
-
-        <div class="weapons">
-          <button value="rock" class="weapon">
-            <img class="weapon-img" src="img/rock.png" alt="image of a rock" />
-          </button>
-          <button value="paper" class="weapon">
-            <img
-              class="weapon-img"
-              src="img/paper.png"
-              alt="image of a paper"
-            />
-          </button>
-          <button value="scissors" class="weapon">
-            <img
-              class="weapon-img"
-              src="img/scissors.png"
-              alt="image of a scissors"
-            />
-          </button>
-        </div>
-
-        <p class="choose">Choose your weapon human.</p>
-      </main>
-    </div>
-    <script src="script.js"></script>
-  </body>
+    </body>
 </html>
