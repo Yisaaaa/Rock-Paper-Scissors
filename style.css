@@ -48,9 +48,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: black;
 
   /* TEMPORARY */
-  display: none;
+  /* display: none; */
   /* opacity: 0;
   pointer-events: none;
   visibility: hidden; */
@@ -60,16 +61,17 @@ body {
   font-size: 2rem;
   font-weight: 500;
   /* margin-top: 30rem; */
-  background-color: #4c1d95;
-  color: #f3e8ff;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
   border-radius: 9px;
-  box-shadow: 0.6rem 0.7rem 0 #16082b;
+  box-shadow: 0.6rem 0.4rem 0 white;
   padding: 0.4rem 1.6rem;
   transition: all 0.1s;
 }
 
 .btn--start:hover {
-  box-shadow: 0.4rem 0.5rem 0 #16082b;
+  box-shadow: 0.4rem 0.2rem 0 white;
   transform: translate(0.1rem, 0.2rem);
 }
 
