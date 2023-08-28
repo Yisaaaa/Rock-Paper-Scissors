@@ -1,19 +1,21 @@
 const startBtnEL = document.querySelector(".btn--start");
 const startPageEL = document.querySelector(".start-page");
+const mainEL = document.querySelector(".main");
+
 const clickSound = new Audio();
 clickSound.src = "audio/click.mp3";
 
 startBtnEL.addEventListener("click", function () {
   clickSound.play();
+  // Sets a timeout for 1 sec
   setTimeout(() => {
-    startPageEL.style.opacity = "0";
-    startPageEL.style.pointerEvents = "none";
-    startPageEL.style.visibility = "hidden";
-    const mainEL = document.querySelector(".main");
-    mainEL.style.opacity = "1";
-    mainEL.style.pointerEvents = "auto";
-    mainEL.style.visibility = "visible";
+    // Hide the start page
+    hide(startPageEL);
 
+    // Show the main page
+    show(mainEL);
+
+    // Initialize the game
     const game = new Game();
     game.start();
   }, 1000);
@@ -43,6 +45,18 @@ startBtnEL.addEventListener("click", function () {
 //     });
 //   });
 // }
+
+function hide(element) {
+  element.style.opacity = "0";
+  element.style.pointerEvents = "none";
+  element.style.visibility = "hidden";
+}
+
+function show(element) {
+  element.style.opacity = "1";
+  element.style.pointerEvents = "auto";
+  element.style.visibility = "visible";
+}
 
 class Game {
   #defeatsWhat = { rock: "scissors", paper: "rock", scissors: "paper" };
