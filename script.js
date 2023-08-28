@@ -1,13 +1,22 @@
 const startBtnEL = document.querySelector(".btn--start");
 const startPageEL = document.querySelector(".start-page");
+const clickSound = new Audio();
+clickSound.src = "audio/click.mp3";
 
 startBtnEL.addEventListener("click", function () {
-  startPageEL.style.opacity = "0";
-  startPageEL.style.pointerEvents = "none";
-  startPageEL.style.visibility = "hidden";
+  clickSound.play();
+  setTimeout(() => {
+    startPageEL.style.opacity = "0";
+    startPageEL.style.pointerEvents = "none";
+    startPageEL.style.visibility = "hidden";
+    const mainEL = document.querySelector(".main");
+    mainEL.style.opacity = "1";
+    mainEL.style.pointerEvents = "auto";
+    mainEL.style.visibility = "visible";
 
-  const game = new Game();
-  game.start();
+    const game = new Game();
+    game.start();
+  }, 1000);
 });
 
 // Create a function that plays a round of the game
