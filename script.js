@@ -46,12 +46,14 @@ startBtnEL.addEventListener("click", function () {
 //   });
 // }
 
+// Hides the given element
 function hide(element) {
     element.style.opacity = "0";
     element.style.pointerEvents = "none";
     element.style.visibility = "hidden";
 }
 
+// Show the given element
 function show(element) {
     element.style.opacity = "1";
     element.style.pointerEvents = "auto";
@@ -98,6 +100,7 @@ class Game {
         }
     }
 
+    // Determine who won the game
     whoWon() {
         if (this.hScore === 5) {
             return "human";
@@ -106,6 +109,7 @@ class Game {
         }
     }
 
+    // Declares the winner
     declareWinner() {
         const weaponsEL = document.querySelector(".weapons");
         const winnerStatement = document.querySelector(".choose");
@@ -121,10 +125,25 @@ class Game {
         }
     }
 
+    updateResultStatement(human, computer, roundResult) {
+        const resultEl = document.querySelector(".result");
+
+        if (roundResult === "win") {
+            resultEl.textContent = `Computer picked ${computer}. You ${roundResult}! ${human} beats ${computer}`;
+        } else if (roundResult === "lose") {
+            resultEl.textContent = `Computer picked ${computer}. You ${roundResult}! ${computer} beats ${human}`;
+        } else {
+            // It's a tie
+            resultEl.textContent = `Computer picked ${computer}. It's a tie.`;
+        }
+    }
+
     start() {
-        let result;
         const weapons = document.querySelectorAll(".weapon");
+
+        // Loops through all weapon buttons
         weapons.forEach((weapon) => {
+            // Add an eventListener to every button
             weapon.addEventListener("click", () => {
                 clickSound.play();
 
@@ -132,11 +151,9 @@ class Game {
                 const computer =
                     this.#WEAPONS[this.getRandomInt(0, this.#WEAPONS.length)];
 
-                console.log(`human: ${human}`);
-                console.log(`computer: ${computer}`);
-
-                result = this.playRound(human, computer);
-                this.updateScore(result);
+                let roundResult = this.playRound(human, computer);
+                this.updateScore(roundResult);
+                this.updateResultStatement(human, computer, roundResult);
 
                 if (this.isThereAWinner()) {
                     this.declareWinner();
