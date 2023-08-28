@@ -80,8 +80,10 @@ class Game {
   updateScore(result) {
     if (result === "win") {
       this.hScore++;
+      document.querySelector(".you-score").textContent = this.hScore;
     } else if (result === "lose") {
       this.cScore++;
+      document.querySelector(".computer-score").textContent = this.cScore;
     }
   }
 
@@ -117,11 +119,9 @@ class Game {
 
         console.log(`human: ${human}`);
         console.log(`computer: ${computer}`);
+
         result = this.playRound(human, computer);
         this.updateScore(result);
-        console.log(
-          `human score: ${this.hScore}. computer score ${this.cScore}`
-        );
 
         if (this.isThereAWinner()) {
           console.log(this.whoWon());
