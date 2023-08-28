@@ -109,6 +109,8 @@ class Game {
     const weapons = document.querySelectorAll(".weapon");
     weapons.forEach((weapon) => {
       weapon.addEventListener("click", () => {
+        clickSound.play();
+
         const human = weapon.value;
         const computer =
           this.#WEAPONS[this.getRandomInt(0, this.#WEAPONS.length)];
@@ -123,7 +125,6 @@ class Game {
 
         if (this.isThereAWinner()) {
           console.log(this.whoWon());
-          document.querySelector(".main");
         }
       });
     });
