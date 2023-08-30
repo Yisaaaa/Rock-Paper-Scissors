@@ -1,166 +1,206 @@
 html,
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 /* GLOBAL RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Lacquer", sans-serif;
-  color: white;
-  background-color: black;
+    font-family: "Lacquer", sans-serif;
+    color: white;
+    background-color: black;
 }
 
 /********************/
 /* GENERAL CSS      */
 /********************/
 .wrapper {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /********************/
 /* START PAGE       */
 /********************/
 .start-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transition: opacity 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: opacity 1s;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
 
-  /* TEMPORARY */
-  /* display: none; */
-  /* opacity: 0;
+    /* TEMPORARY */
+    /* display: none; */
+    /* opacity: 0;
   pointer-events: none;
   visibility: hidden; */
 }
 
 .btn--start {
-  font-size: 2rem;
-  font-weight: 500;
-  /* margin-top: 30rem; */
-  background-color: black;
-  color: white;
-  border: solid 1px white;
-  border-radius: 9px;
-  box-shadow: 0.6rem 0.4rem 0 white;
-  padding: 0.4rem 1.6rem;
-  transition: all 0.1s;
+    font-size: 2rem;
+    font-weight: 500;
+    /* margin-top: 30rem; */
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+    border-radius: 9px;
+    box-shadow: 0.6rem 0.4rem 0 white;
+    padding: 0.4rem 1.6rem;
+    transition: all 0.1s;
 }
 
 .btn--start:hover {
-  box-shadow: 0.4rem 0.2rem 0 white;
-  transform: translate(0.1rem, 0.2rem);
+    box-shadow: 0.4rem 0.2rem 0 white;
+    transform: translate(0.1rem, 0.2rem);
 }
 
 .btn--start:active {
-  box-shadow: 0.1rem 0.2rem 0 #16082b;
-  transform: translate(0.4rem, 0.5rem);
+    box-shadow: 0.1rem 0.2rem 0 #16082b;
+    transform: translate(0.4rem, 0.5rem);
 }
 
 /********************/
 /* MAIN             */
 /********************/
 .main {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  padding-top: 10rem;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding-top: 10rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
 }
 
 /* PLAYER IMAGE */
 .img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40rem;
 }
 
 .img {
-  height: 20rem;
-  margin-bottom: 0.4rem;
+    height: 20rem;
+    margin-bottom: 0.4rem;
 }
 
 .player {
-  text-align: center;
-  font-size: 2.4rem;
+    text-align: center;
+    font-size: 2.4rem;
 }
 
 /* PLAYER SCORE */
 .score-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 9.6rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 9.6rem;
 }
 
 /* RESULT OF ROUND */
 .result {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2.8rem;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2.8rem;
 }
 
 /* WEAPON CHOICES */
 
 .weapons {
-  display: flex;
-  justify-content: center;
-  gap: 3.2rem;
-  margin-bottom: 4.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    margin-bottom: 4.8rem;
 }
 .weapon {
-  background: none;
-  padding: 3rem;
-  transition: all 0.4s ease;
-  border: solid 1px white;
+    background: none;
+    padding: 3rem;
+    transition: all 0.4s ease;
+    border: solid 1px white;
 }
 
 .weapon-img {
-  height: 12.8rem;
+    height: 12.8rem;
 }
 
 .weapon:hover {
-  box-shadow: 0 0 8px 4px white;
-  transform: scale(1.1);
+    box-shadow: 0 0 8px 4px white;
+    transform: scale(1.1);
 }
 
 .weapon:active {
-  box-shadow: 0 0 4px 2px white;
-  transform: scale(1.06);
+    box-shadow: 0 0 4px 2px white;
+    transform: scale(1.06);
 }
 
 /* CHOOSE YOUR WEAPON */
 .choose {
-  font-size: 3rem;
-  text-align: center;
-  transition: all 0.7s ease;
+    font-size: 3rem;
+    text-align: center;
+    transition: all 0.7s ease;
+}
+
+.shake {
+    animation: shakeAnimation 0.5s;
+}
+
+@keyframes shakeAnimation {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }

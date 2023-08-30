@@ -94,8 +94,18 @@ class Game {
         if (player === computer) {
             return "tie";
         } else if (this.#defeatsWhat[player] === computer) {
+            document.querySelector(".computer-img").classList.add("shake");
+            setTimeout(() => {
+                document
+                    .querySelector(".computer-img")
+                    .classList.remove("shake");
+            }, 500);
             return "win";
         } else {
+            document.querySelector(".human-img").classList.add("shake");
+            setTimeout(() => {
+                document.querySelector(".human-img").classList.remove("shake");
+            }, 500);
             return "lose";
         }
     }
