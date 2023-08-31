@@ -5,6 +5,9 @@ const mainEL = document.querySelector(".main");
 const clickSound = new Audio();
 clickSound.src = "audio/click.mp3";
 
+const damageSound = new Audio();
+damageSound.src = "audio/damage-sound.mp3";
+
 startBtnEL.addEventListener("click", function () {
     clickSound.play();
     // Sets a timeout for 1 sec
@@ -94,20 +97,27 @@ class Game {
         if (player === computer) {
             return "tie";
         } else if (this.#defeatsWhat[player] === computer) {
-            document.querySelector(".computer-img").classList.add("shake");
-            setTimeout(() => {
-                document
-                    .querySelector(".computer-img")
-                    .classList.remove("shake");
-            }, 500);
+            this.dealDamage(document.querySelector(".computer-img"));
             return "win";
         } else {
-            document.querySelector(".human-img").classList.add("shake");
-            setTimeout(() => {
-                document.querySelector(".human-img").classList.remove("shake");
-            }, 500);
+            this.dealDamage(document.querySelector(".human-img"));
             return "lose";
         }
+    }
+
+    dealDamage(player) {
+        player.classList.add("shake");
+        damageSound.play();
+        console.log(player);
+        document
+            .querySelector(`.${player.classList[1]} .layer`)
+            .classList.add("damaged-img");
+        setTimeout(() => {
+            player.classList.remove("shake");
+            document
+                .querySelector(`.${player.classList[1]} .layer`)
+                .classList.remove("damaged-img");
+        }, 500);
     }
 
     // Determine who won the game

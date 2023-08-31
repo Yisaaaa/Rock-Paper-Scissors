@@ -105,8 +105,25 @@ body {
 }
 
 .img {
-    height: 20rem;
     margin-bottom: 0.4rem;
+    width: 21rem;
+    height: 25rem;
+}
+
+.computer-img {
+    background: url(img/computer.webp);
+    background-size: cover;
+}
+
+.human-img {
+    background: url(img/human.png);
+    background-size: cover;
+}
+
+.damaged-img {
+    background-color: rgba(255, 0, 0, 0.64);
+    height: 100%;
+    width: 100%;
 }
 
 .player {
