@@ -8,10 +8,10 @@ Rock paper scissors is my very first project using HTML, CSS, and JS.
 
 ### What I got from doing this?
 * It deepened my knowledge of basic JavaScript.
-* Learned how to use event listeners.
-* Practiced my skills on CSS transitions and animations.
-* Learned to manipulate the DOM (Document Object Model).
-* Learned to organize my code into several helper functions.
+* Learned how to use **event listeners**.
+* Practiced my skills on CSS **transitions** and **animations**.
+* Learned to manipulate the **DOM** (Document Object Model).
+* Learned to **organize** my code into several helper functions.
 
 ### Summary
-* This project was really fun!
+* This project was really **fun**!
