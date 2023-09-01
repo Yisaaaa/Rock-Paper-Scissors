@@ -17,5 +17,5 @@ Rock paper scissors is my very first project using HTML, CSS, and JS.
 * This project was really **fun**!
 * Added some damage effect and sound to make it more cool.
 
-### See the live code here
+### See the live preview here
 [Rock Paper Scissors](https://yisaaaa.github.io/Rock-Paper-Scissors/)
