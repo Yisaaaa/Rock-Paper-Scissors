@@ -108,16 +108,18 @@ class Game {
     dealDamage(player) {
         player.classList.add("shake");
         damageSound.play();
-        console.log(player);
+        // console.log(player);
         document
             .querySelector(`.${player.classList[1]} .layer`)
             .classList.add("damaged-img");
-        setTimeout(() => {
-            player.classList.remove("shake");
+
+        player.addEventListener("animationend", (e) => {
+            console.log(e);
             document
                 .querySelector(`.${player.classList[1]} .layer`)
                 .classList.remove("damaged-img");
-        }, 500);
+            player.classList.remove("shake");
+        });
     }
 
     // Determine who won the game
