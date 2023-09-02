@@ -131,6 +131,13 @@ class Game {
         }
     }
 
+    showRestartBtn() {
+        const restartBtn = document.createElement("button");
+        restartBtn.classList.add("btn--restart");
+        restartBtn.textContent = "Restart game";
+        mainEL.append(restartBtn);
+    }
+
     // Declares the winner
     declareWinner() {
         const weaponsEL = document.querySelector(".weapons");
@@ -145,6 +152,8 @@ class Game {
         } else {
             winnerStatement.textContent = "You failed humanity.";
         }
+
+        this.showRestartBtn();
     }
 
     updateResultStatement(human, computer, roundResult) {
@@ -158,6 +167,13 @@ class Game {
             // It's a tie
             resultEl.textContent = `Computer picked ${computer}. It's a tie.`;
         }
+    }
+
+    restartGame() {
+        const chooseEl = document.querySelector(".choose");
+        chooseEl.style.cssText = "transform: translateY(0); font-size: 3rem";
+        this.hScore = 0;
+        this.cScore = 0;
     }
 
     start() {
