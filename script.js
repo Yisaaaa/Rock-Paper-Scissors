@@ -120,7 +120,7 @@ class Game {
             .classList.add("damaged-img");
 
         player.addEventListener("animationend", (e) => {
-            console.log(e);
+            // console.log(e);
             document
                 .querySelector(`.${player.classList[1]} .layer`)
                 .classList.remove("damaged-img");
