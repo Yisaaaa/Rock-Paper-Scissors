@@ -23,6 +23,12 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    /* Because browser on mobile devices ignores
+     overflow: hidden on html and body */
+    overflow: hidden;
+}
+
 /********************/
 /* GENERAL CSS      */
 /********************/
