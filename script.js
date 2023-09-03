@@ -180,7 +180,7 @@ class Game {
         restartBtn.addEventListener("click", () => {
             clickSound.play();
             this.restartGame();
-            hide(restartBtn);
+            restartBtn.remove();
         });
     }
 
