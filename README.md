@@ -7,7 +7,7 @@ This is a simple rock and paper scissors game from [The Odin Project.](https://w
 Rock paper scissors is my very first project using HTML, CSS, and JS.
 
 ### What I got from doing this?
-* It deepened my knowledge of basic JavaScript.
+* It deepened my knowledge of basic **JavaScript**.
 * Learned how to use **event listeners**.
 * Practiced my skills on CSS **transitions** and **animations**.
 * Learned to manipulate the **DOM** (Document Object Model).
@@ -15,8 +15,8 @@ Rock paper scissors is my very first project using HTML, CSS, and JS.
 
 ### Summary
 * This project was really **fun**!
-* Added some damage effect and sound to make it more cool.
-* I also made it to be responsive!
+* Added some **damage effect** and **sound** to make it more cool.
+* I also made it to be **responsive**!
 
 ### See the live preview here
 [Rock Paper Scissors](https://yisaaaa.github.io/Rock-Paper-Scissors/)
