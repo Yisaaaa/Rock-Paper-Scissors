@@ -113,6 +113,7 @@ class Game {
         const weaponsEL = document.querySelector(".weapons");
         weaponsEL.style.pointerEvents = "none";
         player.classList.add("shake");
+        damageSound.currentTime = 0;
         damageSound.play();
         // console.log(player);
         document
@@ -178,6 +179,7 @@ class Game {
         mainEL.append(restartBtn);
 
         restartBtn.addEventListener("click", () => {
+            clickSound.currentTime = 0;
             clickSound.play();
             this.restartGame();
             restartBtn.remove();
