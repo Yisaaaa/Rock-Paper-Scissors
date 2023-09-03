@@ -190,7 +190,7 @@ class Game {
         this.hScore = 0;
         this.cScore = 0;
 
-        chooseEl.style.cssText = "transform: translateY(0); font-size: 3rem";
+        chooseEl.removeAttribute("style");
         chooseEl.textContent = "Choose your weapon human.";
         this.updateScore(null, true);
         this.updateResultStatement(null, null, null, true);

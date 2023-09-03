@@ -112,12 +112,12 @@ body {
 }
 
 .computer-img {
-    background: url(img/computer.webp);
+    background: url(../img/computer.webp);
     background-size: cover;
 }
 
 .human-img {
-    background: url(img/human.png);
+    background: url(../img/human.png);
     background-size: cover;
 }
 
