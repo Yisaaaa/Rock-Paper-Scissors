@@ -82,8 +82,12 @@ class Game {
     }
 
     // Updates the score depending on the result of the round.
-    updateScore(result) {
-        if (result === "win") {
+    updateScore(result, restart = false) {
+        if (restart) {
+            document.querySelector(".you-score").textContent = 0;
+            document.querySelector(".computer-score").textContent = 0;
+            return;
+        } else if (result === "win") {
             this.hScore++;
             document.querySelector(".you-score").textContent = this.hScore;
         } else if (result === "lose") {
@@ -106,6 +110,8 @@ class Game {
     }
 
     dealDamage(player) {
+        const weaponsEL = document.querySelector(".weapons");
+        weaponsEL.style.pointerEvents = "none";
         player.classList.add("shake");
         damageSound.play();
         // console.log(player);
@@ -119,6 +125,7 @@ class Game {
                 .querySelector(`.${player.classList[1]} .layer`)
                 .classList.remove("damaged-img");
             player.classList.remove("shake");
+            weaponsEL.style.pointerEvents = "auto";
         });
     }
 
@@ -129,13 +136,6 @@ class Game {
         } else {
             return "computer";
         }
-    }
-
-    showRestartBtn() {
-        const restartBtn = document.createElement("button");
-        restartBtn.classList.add("btn--restart");
-        restartBtn.textContent = "Restart game";
-        mainEL.append(restartBtn);
     }
 
     // Declares the winner
@@ -156,10 +156,12 @@ class Game {
         this.showRestartBtn();
     }
 
-    updateResultStatement(human, computer, roundResult) {
+    updateResultStatement(human, computer, roundResult, restart = false) {
         const resultEl = document.querySelector(".result");
-
-        if (roundResult === "win") {
+        if (restart) {
+            resultEl.textContent = "...";
+            return;
+        } else if (roundResult === "win") {
             resultEl.textContent = `Computer picked ${computer}. You ${roundResult}! ${human} beats ${computer}`;
         } else if (roundResult === "lose") {
             resultEl.textContent = `Computer picked ${computer}. You ${roundResult}! ${computer} beats ${human}`;
@@ -169,11 +171,31 @@ class Game {
         }
     }
 
+    showRestartBtn() {
+        const restartBtn = document.createElement("button");
+        restartBtn.classList.add("btn--restart");
+        restartBtn.textContent = "Restart game";
+        mainEL.append(restartBtn);
+
+        restartBtn.addEventListener("click", () => {
+            clickSound.play();
+            this.restartGame();
+            hide(restartBtn);
+        });
+    }
+
     restartGame() {
+        const weaponsEL = document.querySelector(".weapons");
         const chooseEl = document.querySelector(".choose");
-        chooseEl.style.cssText = "transform: translateY(0); font-size: 3rem";
         this.hScore = 0;
         this.cScore = 0;
+
+        chooseEl.style.cssText = "transform: translateY(0); font-size: 3rem";
+        chooseEl.textContent = "Choose your weapon human.";
+        this.updateScore(null, true);
+        this.updateResultStatement(null, null, null, true);
+
+        show(weaponsEL);
     }
 
     start() {
